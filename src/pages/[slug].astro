@@ -1,0 +1,109 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import WhatsAppFloat from '@/components/WhatsAppFloat.astro';
+import FFCServiceCategoryPage from '@/components/ffc-service-category-page.astro';
+import FFCAreaPage from '@/components/ffc-area-page.astro';
+import FFCKeywordPage from '@/components/ffc-keyword-page.astro';
+import {
+  serviceCategories,
+  vadodaraAreas,
+  getServiceBySlug,
+  getAreaBySlug,
+  type ServiceCategory,
+  type ServiceKeyword,
+} from '@/lib/ffc-config';
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  const paths: { params: { slug: string } }[] = [];
+
+  for (const service of serviceCategories) {
+    paths.push({ params: { slug: service.slug } });
+  }
+
+  for (const area of vadodaraAreas) {
+    paths.push({ params: { slug: area.slug } });
+  }
+
+  for (const service of serviceCategories) {
+    for (const keyword of service.keywords) {
+      paths.push({ params: { slug: keyword.slug } });
+    }
+  }
+
+  return paths;
+}
+
+function findKeywordBySlug(
+  slug: string,
+): { keyword: ServiceKeyword; service: ServiceCategory } | undefined {
+  for (const service of serviceCategories) {
+    const keyword = service.keywords.find((k) => k.slug === slug);
+    if (keyword) return { keyword, service };
+  }
+  return undefined;
+}
+
+const { slug } = Astro.params as { slug: string };
+
+const serviceCategory = getServiceBySlug(slug);
+const area = getAreaBySlug(slug);
+const keywordData = findKeywordBySlug(slug);
+
+if (!serviceCategory && !area && !keywordData) {
+  return Astro.redirect('/404', 302);
+}
+
+const SITE_URL = 'https://friendsfactorycafe.com';
+
+let title = '';
+let description = '';
+let keywords: string[] = [];
+
+if (serviceCategory) {
+  title = serviceCategory.metaTitle;
+  description = serviceCategory.metaDescription;
+  keywords = [
+    serviceCategory.name.toLowerCase(),
+    `${serviceCategory.name.toLowerCase()} vadodara`,
+    `${serviceCategory.name.toLowerCase()} for couples`,
+    `best ${serviceCategory.name.toLowerCase()} vadodara`,
+    `friends factory cafe ${serviceCategory.name.toLowerCase()}`,
+  ];
+} else if (area) {
+  title = `Romantic Celebration in ${area.name}, Vadodara | Friends Factory Cafe`;
+  description = `Book romantic celebrations, candlelight dinners, birthday surprises & anniversary parties in ${area.name}, Vadodara at Friends Factory Cafe. Private rooftop venue with stunning setups. Call +91 74878 88730.`;
+  keywords = [
+    `romantic celebration ${area.name}`,
+    `candlelight dinner ${area.name}`,
+    `birthday surprise ${area.name}`,
+    `friends factory cafe ${area.name}`,
+    `couple cafe ${area.name} vadodara`,
+    `anniversary dinner ${area.name}`,
+    `romantic restaurant ${area.name}`,
+    `private dining ${area.name}`,
+  ];
+} else if (keywordData) {
+  title = keywordData.keyword.metaTitle;
+  description = keywordData.keyword.metaDescription;
+  keywords = [
+    keywordData.keyword.title.toLowerCase(),
+    `${keywordData.keyword.title.toLowerCase()} vadodara`,
+    `${keywordData.service.name.toLowerCase()} vadodara`,
+    `friends factory cafe ${keywordData.keyword.title.toLowerCase()}`,
+    `best ${keywordData.keyword.title.toLowerCase()} vadodara`,
+    `${keywordData.service.name.toLowerCase()} near me vadodara`,
+  ];
+}
+---
+<BaseLayout title={title} description={description} keywords={keywords} canonicalPath={`/${slug}`}>
+  <Header />
+  {serviceCategory && <FFCServiceCategoryPage service={serviceCategory} />}
+  {area && <FFCAreaPage area={area} />}
+  {keywordData && <FFCKeywordPage service={keywordData.service} keyword={keywordData.keyword} />}
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

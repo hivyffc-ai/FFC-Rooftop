@@ -1,0 +1,44 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import WhatsAppFloat from '@/components/WhatsAppFloat.astro';
+import { vadodaraAreas } from '@/lib/ffc-config';
+---
+<BaseLayout
+  title="Areas We Serve in Vadodara — Friends Factory Cafe"
+  description="Friends Factory Cafe serves romantic celebrations across all major areas of Vadodara including Gotri, Alkapuri, Fatehgunj, Vasna, Race Course, Subhanpura, Akota, and more. Private rooftop & glass house venue near you."
+  keywords={["friends factory cafe areas vadodara", "romantic cafe near me vadodara", "couple cafe all areas vadodara", "celebration venue vadodara areas"]}
+  canonicalPath="/areas"
+  ogImageAlt="Areas Served by Friends Factory Cafe Vadodara"
+  noTemplate={false}
+>
+  <div class="min-h-screen bg-white">
+    <Header />
+    <section class="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-serif">
+            Areas We Serve in Vadodara
+          </h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Romantic celebrations for couples from every corner of Vadodara, Gujarat
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {vadodaraAreas.map((area) => (
+            <a
+              href={`/${area.slug}`}
+              class="group bg-white rounded-lg border border-amber-100 px-4 py-3 hover:bg-amber-50 hover:border-amber-300 transition-all text-center"
+            >
+              <span class="text-gray-700 group-hover:text-amber-700 font-medium text-sm">{area.name}</span>
+              <div class="text-xs text-gray-400 mt-0.5">Vadodara</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <Footer />
+    <WhatsAppFloat />
+  </div>
+</BaseLayout>

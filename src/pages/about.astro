@@ -1,0 +1,31 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FFCAboutPage from '@/components/ffc-about-page.astro';
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Friends Factory Cafe — Vadodara's Best Romantic Venue",
+  "url": "https://friendsfactorycafe.com/about",
+  "description": "Learn about Friends Factory Cafe, Vadodara's premier private rooftop and glass house romantic celebration venue. Over 500 magical evenings since 2019.",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "@id": "https://friendsfactorycafe.com/#business",
+    "name": "Friends Factory Cafe",
+    "foundingDate": "2019",
+    "numberOfEmployees": "10",
+    "areaServed": "Vadodara, Gujarat"
+  }
+};
+---
+<BaseLayout
+  title="About Friends Factory Cafe | Vadodara's Premier Romantic Venue Since 2019"
+  description="Friends Factory Cafe is Vadodara's most-loved private romantic celebration venue. 500+ magical evenings, 4.9 Google rating, 8 unique rooftop & glass house setups. Gotri, Vadodara — open 11 AM to 11 PM daily."
+  keywords={["about friends factory cafe", "romantic venue vadodara", "couple cafe vadodara story", "private celebration venue gotri vadodara"]}
+  canonicalPath="/about"
+  ogImageAlt="About Friends Factory Cafe Vadodara"
+  noTemplate={false}
+  extraJsonLd={aboutJsonLd}
+>
+  <FFCAboutPage />
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FFCHomePage from '@/components/ffc-home-page.astro';
+
+const title = "Friends Factory Cafe Vadodara | Best Romantic Rooftop Venue | Candlelight Dinners & Birthday Surprises";
+const description = "Best rooftop romantic celebration venue in Vadodara. Private candlelight dinners, birthday surprises, anniversary celebrations & proposals. 8 exclusive setups from ₹4,700. 100% private. Book via WhatsApp: +91 74878 88730.";
+const keywords = [
+  "friends factory cafe",
+  "friends factory cafe vadodara",
+  "romantic cafe vadodara",
+  "rooftop dinner vadodara",
+  "candlelight dinner vadodara",
+  "birthday surprise vadodara",
+  "anniversary celebration vadodara",
+  "proposal setup vadodara",
+  "private dining vadodara",
+  "couples cafe gotri vadodara",
+  "romantic restaurant vadodara",
+  "pre-wedding photoshoot vadodara",
+  "surprise date vadodara",
+  "romantic venue gujarat",
+  "glass house cafe vadodara",
+  "baby moments pregnancy announcement vadodara",
+  "valentine dinner vadodara",
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonicalPath="/"
+  ogImage="/og-image.svg"
+  ogImageAlt="Friends Factory Cafe - Best Romantic Rooftop Celebration Venue in Vadodara"
+  noTemplate={true}
+>
+  <FFCHomePage />
+</BaseLayout>

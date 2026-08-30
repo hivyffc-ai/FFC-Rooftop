@@ -1,0 +1,59 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FFCPackagesPage from '@/components/ffc-packages-page.astro';
+import { packages } from '@/lib/ffc-config';
+
+const title = "Romantic Celebration Packages Vadodara | Friends Factory Cafe";
+const description = "8 exclusive romantic celebration packages in Vadodara from ₹4,700. Private rooftop & glass house setups for birthdays, anniversaries, proposals, candlelight dinners & surprise dates. Book now at Friends Factory Cafe.";
+
+const extraJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Romantic Celebration Packages at Friends Factory Cafe Vadodara",
+    "description": "8 exclusive private celebration packages for couples in Vadodara",
+    "numberOfItems": packages.length,
+    "itemListElement": packages.map((pkg, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": pkg.name,
+        "description": pkg.shortDescription,
+        "url": `https://friendsfactorycafe.com/packages/${pkg.slug}`,
+        "image": `https://friendsfactorycafe.com${pkg.thumbnail}`,
+        "offers": {
+          "@type": "Offer",
+          "price": pkg.price.toString(),
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "LocalBusiness",
+            "name": "Friends Factory Cafe",
+            "address": "Gotri, Vadodara, Gujarat"
+          }
+        }
+      }
+    }))
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://friendsfactorycafe.com" },
+      { "@type": "ListItem", "position": 2, "name": "Packages", "item": "https://friendsfactorycafe.com/packages" }
+    ]
+  }
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={["romantic packages vadodara", "candlelight dinner package vadodara", "birthday celebration package vadodara", "anniversary package vadodara", "proposal package vadodara", "private rooftop dinner vadodara", "glass house celebration vadodara", "friends factory cafe packages"]}
+  canonicalPath="/packages"
+  ogImageAlt="Friends Factory Cafe - 8 Romantic Celebration Packages in Vadodara"
+  noTemplate={true}
+  extraJsonLd={extraJsonLd}
+>
+  <FFCPackagesPage />
+</BaseLayout>

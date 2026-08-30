@@ -1,0 +1,46 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FFCContactPage from '@/components/ffc-contact-page.astro';
+
+const contactJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact & Book — Friends Factory Cafe Vadodara",
+  "url": "https://friendsfactorycafe.com/contact",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "@id": "https://friendsfactorycafe.com/#business",
+    "name": "Friends Factory Cafe",
+    "telephone": "+91-7487888730",
+    "email": "hello@friendsfactorycafe.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "424, OneWest, Asopalav W, 4th Floor, Priya Talkies Road, Besides Adventuraa",
+      "addressLocality": "Gotri",
+      "addressRegion": "Gujarat",
+      "postalCode": "391101",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "11:00",
+        "closes": "23:00"
+      }
+    ],
+    "hasMap": "https://maps.google.com/?q=Friends+Factory+Cafe+Gotri+Vadodara"
+  }
+};
+---
+<BaseLayout
+  title="Contact & Book — Friends Factory Cafe Vadodara | +91 74878 88730"
+  description="Book your romantic celebration at Friends Factory Cafe, Gotri, Vadodara. Call or WhatsApp +91 74878 88730. Open daily 11 AM–11 PM. 424, OneWest, Asopalav W, 4th Floor, Priya Talkies Road, Gotri, Vadodara 391101."
+  keywords={["contact friends factory cafe", "book romantic dinner vadodara", "friends factory cafe phone number", "friends factory cafe address", "couple dinner booking vadodara"]}
+  canonicalPath="/contact"
+  ogImageAlt="Contact Friends Factory Cafe Vadodara"
+  noTemplate={false}
+  extraJsonLd={contactJsonLd}
+>
+  <FFCContactPage />
+</BaseLayout>

@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FFCBlogPage from '@/components/ffc-blog-page.astro';
+import { getAllBlogPosts } from '@/lib/ffc-config';
+
+const posts = getAllBlogPosts();
+
+const title = "Romantic Celebration Blog | Friends Factory Cafe Vadodara";
+const description = "Expert tips, ideas & guides for romantic celebrations in Vadodara. Candlelight dinner ideas, birthday surprise tips, anniversary planning & proposal inspiration at Friends Factory Cafe.";
+
+const blogListingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Friends Factory Cafe Blog",
+  "description": "Romantic celebration tips and guides for couples in Vadodara",
+  "url": "https://friendsfactorycafe.com/blog",
+  "publisher": {
+    "@type": "LocalBusiness",
+    "@id": "https://friendsfactorycafe.com/#business",
+    "name": "Friends Factory Cafe"
+  },
+  "blogPost": posts.slice(0, 10).map((post) => ({
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "url": `https://friendsfactorycafe.com/blog/${post.slug}`,
+    "image": `https://friendsfactorycafe.com${post.coverImage}`,
+    "datePublished": post.publishedAt,
+    "author": {
+      "@type": "Organization",
+      "name": "Friends Factory Cafe"
+    }
+  }))
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://friendsfactorycafe.com" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://friendsfactorycafe.com/blog" }
+  ]
+};
+---
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={["romantic celebration blog vadodara", "candlelight dinner ideas vadodara", "birthday surprise ideas vadodara", "anniversary celebration tips vadodara", "proposal ideas vadodara", "couple date ideas vadodara", "romantic tips friends factory cafe"]}
+  canonicalPath="/blog"
+  ogImageAlt="Friends Factory Cafe Blog - Romantic Celebration Tips & Ideas"
+  noTemplate={true}
+  extraJsonLd={[blogListingJsonLd, breadcrumbJsonLd]}
+>
+  <FFCBlogPage />
+</BaseLayout>

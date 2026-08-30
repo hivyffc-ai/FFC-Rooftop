@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import WhatsAppFloat from '@/components/WhatsAppFloat.astro';
+import { serviceCategories, siteConfig } from '@/lib/ffc-config';
+---
+<BaseLayout
+  title="All Romantic Celebration Services — Friends Factory Cafe Vadodara"
+  description="Complete list of romantic celebration services at Friends Factory Cafe, Vadodara. Birthday surprises, candlelight dinners, anniversary celebrations, proposals, surprise dates, pre-wedding shoots & baby moments. Private rooftop & glass house."
+  keywords={["romantic services vadodara", "birthday surprise service vadodara", "anniversary celebration vadodara", "proposal service vadodara", "candlelight dinner service vadodara", "pre-wedding shoot vadodara", "friends factory cafe services"]}
+  canonicalPath="/services"
+  ogImageAlt="Romantic Celebration Services — Friends Factory Cafe Vadodara"
+  noTemplate={false}
+>
+  <div class="min-h-screen bg-white">
+    <Header />
+    <section class="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-serif">
+            Our Services
+          </h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Vadodara's most-loved romantic celebration venue — 8 unique private setups for every occasion
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {serviceCategories.map((service) => (
+            <a href={`/${service.slug}`} class="group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-amber-100 p-6">
+              <div class="text-4xl mb-3">{service.emoji}</div>
+              <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">
+                {service.name}
+              </h2>
+              <p class="text-gray-600 text-sm">{service.description}</p>
+              <div class="mt-4 text-amber-600 text-sm font-medium flex items-center gap-1">
+                Explore {service.keywords.length} packages →
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <Footer />
+    <WhatsAppFloat />
+  </div>
+</BaseLayout>

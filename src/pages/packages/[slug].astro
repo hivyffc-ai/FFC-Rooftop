@@ -1,0 +1,97 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FFCPackageDetailPage from '@/components/ffc-package-detail-page.astro';
+import { packages, siteConfig } from '@/lib/ffc-config';
+
+export function getStaticPaths() {
+  return packages.map((pkg) => ({
+    params: { slug: pkg.slug },
+    props: { package: pkg },
+  }));
+}
+
+const { package: pkg } = Astro.props;
+
+if (!pkg) {
+  return Astro.redirect('/packages', 302);
+}
+
+const SITE_URL = 'https://friendsfactorycafe.com';
+
+const title = `${pkg.name} — Romantic Setup in Vadodara | ₹${pkg.price.toLocaleString('en-IN')} | Friends Factory Cafe`;
+const description = `Book the ${pkg.name} at Friends Factory Cafe, Vadodara. ${pkg.shortDescription}. Starting at ₹${pkg.price.toLocaleString('en-IN')} — Includes 3-hour private ${pkg.id.includes('rooftop') ? 'rooftop' : 'glass house'} celebration, welcome drink, decor & music. Call +91 74878 88730.`;
+
+const keywords = [
+  pkg.name.toLowerCase(),
+  `${pkg.name.toLowerCase()} vadodara`,
+  ...pkg.perfectFor.map((item) => `${item.toLowerCase()} vadodara`),
+  "friends factory cafe packages",
+  "romantic setup vadodara",
+  "private celebration vadodara",
+  "couple celebration gotri vadodara",
+];
+
+const packageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": pkg.name,
+  "description": pkg.shortDescription,
+  "image": pkg.images.slice(0, 5).map((img) => `${SITE_URL}${img}`),
+  "url": `${SITE_URL}/packages/${pkg.slug}`,
+  "brand": {
+    "@type": "Brand",
+    "name": "Friends Factory Cafe"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": pkg.price.toString(),
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/InStock",
+    "url": `${SITE_URL}/packages/${pkg.slug}`,
+    "seller": {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#business`,
+      "name": "Friends Factory Cafe",
+      "telephone": siteConfig.phone,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "424, OneWest, Asopalav W, 4th Floor, Priya Talkies Road",
+        "addressLocality": "Gotri, Vadodara",
+        "addressRegion": "Gujarat",
+        "postalCode": "391101",
+        "addressCountry": "IN"
+      }
+    }
+  },
+  "category": "Romantic Celebration Package",
+  "additionalProperty": pkg.features.map((feature) => ({
+    "@type": "PropertyValue",
+    "name": "Included",
+    "value": feature
+  }))
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+    { "@type": "ListItem", "position": 2, "name": "Packages", "item": `${SITE_URL}/packages` },
+    { "@type": "ListItem", "position": 3, "name": pkg.name, "item": `${SITE_URL}/packages/${pkg.slug}` }
+  ]
+};
+---
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonicalPath={`/packages/${pkg.slug}`}
+  ogImage={pkg.thumbnail}
+  ogImageAlt={`${pkg.name} — Romantic Celebration Setup at Friends Factory Cafe Vadodara`}
+  noTemplate={true}
+  extraJsonLd={[packageJsonLd, breadcrumbJsonLd]}
+>
+  <FFCPackageDetailPage package={pkg} />
+</BaseLayout>
