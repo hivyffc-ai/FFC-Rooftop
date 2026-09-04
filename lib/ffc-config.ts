@@ -117,7 +117,7 @@ Romantic accents, twinkling lights, and a warm atmosphere create a perfect backd
 - Candle-Lit Seating & Skyline Views
 Comfortable seating for meaningful conversations, shared smiles, and unforgettable moments under the stars.
 
-- Delicious Snacks & Soft Music
+- Delicious Meal & Soft Music
 Tasty treats and gentle melodies enhance the mood for love, laughter, and celebration.
 
 Perfect For:
@@ -133,7 +133,7 @@ Birthday Surprise Vadodara | Anniversary Celebration | Romantic Proposal | Candl
       "Candle-Lit Seating with premium decor & props",
       "Panoramic Skyline Views of Vadodara",
       "Ambient Lighting & Twinkling Fairy Lights",
-      "Delicious Snacks & Soft Romantic Music"
+      "Delicious Meal & Soft Romantic Music"
     ],
     perfectFor: ["Birthday Surprise", "Anniversary Celebration", "Romantic Proposal", "Candlelight Dinner", "Surprise Party", "Pre-Wedding Shoot", "Baby Moments"],
     thumbnail: "/packages/thumbnails/forever-us-loveframe-rooftop.png",
@@ -183,7 +183,7 @@ Graceful curtains, glowing lights, and elegant accents create a stunning setting
 Comfortable seating with premium décor and panoramic skyline views, designed for intimate conversations and meaningful celebrations 💑
 
 • Tasty Bites & Gentle Music 🍽️🎶
-A soothing soundtrack and delicious snacks to elevate the mood and complete the experience ✨
+A soothing soundtrack and delicious meal to elevate the mood and complete the experience ✨
 
 🎉 Ideal For
 Birthday Celebration Vadodara | Anniversary Surprise | Romantic Proposal Venue | Candlelight Dinner | Surprise Party | Pre-Wedding Photoshoot | Baby Moments (Pregnancy Announcement)
@@ -249,7 +249,7 @@ Warm lighting, stylish accents, and thoughtful décor create the perfect backdro
 • Candle-Lit Seating & Panoramic Views 🕯️💑
 Comfortable seating designed for deep conversations, cherished moments, and intimate celebrations 🌅
 
-• Delicious Snacks & Soothing Music 🍽️🎶
+• Delicious Meal & Soothing Music 🍽️🎶
 A delightful culinary experience paired with gentle music to set the perfect mood for love and joy ✨
 
 🎉 Perfect For
@@ -265,7 +265,7 @@ Birthday Surprise Vadodara | Anniversary Celebration | Romantic Proposal | Candl
       "Flower Decorations & Premium Props 🌸",
       "Candle-Lit Seating with Panoramic Views",
       "Climate Controlled Environment",
-      "Delicious Snacks & Soothing Music 🎶"
+      "Delicious Meal & Soothing Music 🎶"
     ],
     perfectFor: ["Birthday Surprise", "Anniversary Celebration", "Romantic Proposal", "Candlelight Dinner", "Surprise Party", "Pre-Wedding Photoshoot", "Baby Moments"],
     thumbnail: "/packages/thumbnails/golden-promise-glass-house.png",
@@ -318,7 +318,7 @@ Soft drapes, glowing lights, and subtle romantic details create a stunning backd
 Comfortable seating with skyline views, crafted for quiet conversations, deep connections, and shared smiles 💑
 
 • Gentle Music & Tasty Bites 🎶🍽️
-A soothing playlist paired with delicious snacks to set the perfect mood for the evening 💫
+A soothing playlist paired with delicious meal to set the perfect mood for the evening 💫
 
 🎉 Perfect For
 Romantic Proposal Vadodara | Anniversary Dinner | Candlelight Dinner for Couples | Surprise Date Night | Pre-Wedding Photoshoot | Baby Moments (Pregnancy Announcement)
@@ -332,7 +332,7 @@ Romantic Proposal Vadodara | Anniversary Dinner | Candlelight Dinner for Couples
       "Dreamy Moon-themed Décor with silver accents ✨",
       "Candle Pathway & Romantic Seating 🕯️",
       "Panoramic Skyline Views & Starlit Ambiance 🌆",
-      "Gentle Music & Delicious Snacks 🎶",
+      "Gentle Music & Delicious Meal 🎶",
       "Celebration Cake available (+₹500) 🍰"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Dinner", "Candlelight Dinner", "Surprise Date Night", "Pre-Wedding Photoshoot", "Baby Moments"],
@@ -380,7 +380,7 @@ A dreamy backdrop for Pre-Wedding Shoots, Proposals & Romantic Moments 📸
 • Candle-Lit Seating with props, premium décor & panoramic skyline views 🌅
 Crafted for Anniversaries, Candlelight Dinners & Intimate Surprises 💑
 
-• Delicious Snacks 🍽️ & Soft, Joyful Music 🎶
+• Delicious Meal 🍽️ & Soft, Joyful Music 🎶
 Creating the perfect mood for Every Celebration & Love Story ✨
 
 🎉 Perfect For
@@ -396,7 +396,7 @@ Birthday Surprise Vadodara | Anniversary Celebration | Romantic Proposal | Candl
       "Twinkling Lights & Romantic Décor 💡",
       "Candle-Lit Seating with premium props 🕯️",
       "Panoramic Skyline Views of Vadodara 🌅",
-      "Delicious Snacks & Joyful Music 🎶",
+      "Delicious Meal & Joyful Music 🎶",
       "Celebration Cake available (+₹500) 🍰"
     ],
     perfectFor: ["Birthday Surprise", "Anniversary Celebration", "Romantic Proposal", "Candlelight Dinner", "Surprise Party", "Pre-Wedding Photoshoot", "Baby Moments"],
@@ -451,7 +451,7 @@ Minimal yet romantic décor with glowing lights creates a stunning atmosphere fo
 Cozy seating designed for deep conversations, shared smiles, and unforgettable memories 🌸
 
 • Delicious Bites & Soothing Music 🍽️🎶
-Gentle melodies and tasty snacks complete the experience with warmth and charm ✨
+Gentle melodies and tasty meal complete the experience with warmth and charm ✨
 
 🎉 Perfect For
 Birthday Celebration Vadodara | Anniversary Surprise | Romantic Proposal | Candlelight Dinner for Couples | Surprise Party | Pre-Wedding Photoshoot | Baby Moments (Pregnancy Announcement)
@@ -465,7 +465,7 @@ Birthday Celebration Vadodara | Anniversary Surprise | Romantic Proposal | Candl
       "Minimalist Elegant White Theme Décor",
       "Flower Arrangements & Candle Setup 🌸",
       "Soft Lighting & Instagram-worthy Spots 📸",
-      "Delicious Snacks & Soothing Music 🎶",
+      "Delicious Meal & Soothing Music 🎶",
       "Celebration Cake available (+₹500) 🍰"
     ],
     perfectFor: ["Birthday Celebration", "Anniversary Surprise", "Romantic Proposal", "Candlelight Dinner", "Surprise Party", "Pre-Wedding Photoshoot", "Baby Moments"],
@@ -516,7 +516,7 @@ Soft lighting, elegant décor, and thoughtful details create a perfect backdrop 
 • Candle-Lit Seating & Cozy Corners 🕯️💑
 Comfortable seating designed for shared smiles, heart-to-heart conversations, and memorable experiences 🌿
 
-• Delicious Snacks & Gentle Music 🍽️🎶
+• Delicious Meal & Gentle Music 🍽️🎶
 Tasty bites paired with a soft playlist to set the mood for love and laughter ✨
 
 🎉 Perfect For
@@ -531,7 +531,7 @@ Birthday Surprise Vadodara | Anniversary Dinner | Romantic Proposal | Candleligh
       "Sweet & Cozy Theme with warm décor 🌸",
       "Balloon Arrangements & Romantic Props 🎈",
       "Candle-Lit Seating & Cozy Corners 🕯️",
-      "Delicious Snacks & Gentle Music 🎶",
+      "Delicious Meal & Gentle Music 🎶",
       "Celebration Cake available (+₹500) 🍰"
     ],
     perfectFor: ["Birthday Surprise", "Anniversary Dinner", "Romantic Proposal", "Candlelight Dinner", "Surprise Date", "Pre-Wedding Photoshoot", "Baby Moments"],
@@ -584,7 +584,7 @@ A clean, elegant setup that enhances emotions and creates a stunning backdrop fo
 Comfortable seating designed for quiet conversations, deep connections, and unforgettable moments 💞
 
 • Tasty Bites & Gentle Music 🍽️🎶
-Soft music and delicious snacks to complete a calm, love-filled experience ✨
+Soft music and delicious meal to complete a calm, love-filled experience ✨
 
 🎉 Perfect For
 Birthday Surprise Vadodara | Anniversary Celebration | Romantic Proposal | Candlelight Dinner for Couples | Surprise Party | Pre-Wedding Photoshoot | Baby Moments (Pregnancy Announcement)
@@ -598,7 +598,7 @@ Birthday Surprise Vadodara | Anniversary Celebration | Romantic Proposal | Candl
       "Pure White Theme with elegant simplicity 🤍",
       "Rose Petals & Candle Pathway 🌹",
       "Minimal Romantic Décor & Soft Lights 💡",
-      "Delicious Snacks & Gentle Music 🎶",
+      "Delicious Meal & Gentle Music 🎶",
       "Celebration Cake available (+₹500) 🍰"
     ],
     perfectFor: ["Birthday Surprise", "Anniversary Celebration", "Romantic Proposal", "Candlelight Dinner", "Surprise Party", "Pre-Wedding Photoshoot", "Baby Moments"],
