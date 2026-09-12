@@ -3,7 +3,7 @@
 // ============================================================================
 
 export const SEO_CONFIG = {
-  siteUrl: "https://friendsfactorycafe.com",
+  siteUrl: "https://rooftopdatevadodara.com",
   siteName: "Friends Factory Cafe",
   niche: "Rooftop Date & Romantic Dining",
   location: "Vadodara",

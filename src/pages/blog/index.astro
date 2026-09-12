@@ -13,18 +13,18 @@ const blogListingJsonLd = {
   "@type": "Blog",
   "name": "Friends Factory Cafe Blog",
   "description": "Romantic celebration tips and guides for couples in Vadodara",
-  "url": "https://friendsfactorycafe.com/blog",
+  "url": "https://rooftopdatevadodara.com/blog",
   "publisher": {
     "@type": "LocalBusiness",
-    "@id": "https://friendsfactorycafe.com/#business",
+    "@id": "https://rooftopdatevadodara.com/#business",
     "name": "Friends Factory Cafe"
   },
   "blogPost": posts.slice(0, 10).map((post) => ({
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.excerpt,
-    "url": `https://friendsfactorycafe.com/blog/${post.slug}`,
-    "image": `https://friendsfactorycafe.com${post.coverImage}`,
+    "url": `https://rooftopdatevadodara.com/blog/${post.slug}`,
+    "image": `https://rooftopdatevadodara.com${post.coverImage}`,
     "datePublished": post.publishedAt,
     "author": {
       "@type": "Organization",
@@ -37,8 +37,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://friendsfactorycafe.com" },
-    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://friendsfactorycafe.com/blog" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rooftopdatevadodara.com" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rooftopdatevadodara.com/blog" }
   ]
 };
 ---

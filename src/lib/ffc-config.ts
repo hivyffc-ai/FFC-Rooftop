@@ -73,7 +73,7 @@ export const siteConfig = {
   email: "hello@friendsfactorycafe.com",
   address: "424, OneWest, Asopalav W, 4th Floor, Priya Talkies Road, Besides Adventuraa, Sevasi - Canal Rd, Gotri, Vadodara, Gujarat 391101",
   city: "Vadodara",
-  website: "https://friendsfactorycafe.com",
+  website: "https://rooftopdatevadodara.com",
   colors: {
     primary: "#D97706", // Amber/Orange
     secondary: "#F59E0B",
