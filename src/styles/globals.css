@@ -1,9 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "@fontsource/playfair-display/400.css";
-@import "@fontsource/playfair-display/500.css";
-@import "@fontsource/playfair-display/600.css";
-@import "@fontsource/playfair-display/700.css";
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
@@ -108,7 +105,31 @@
 /* Friends Factory Cafe typography */
 @theme inline {
   --font-sans: "Inter", "sans-serif";
-  --font-serif: "Playfair Display", "serif";
+  --font-serif: "Fraunces", "serif";
+
+  /* Open Sky palette — reskin: coral accent replacing amber/gold */
+  --color-amber-50: #FEF4F1;
+  --color-amber-100: #FDE5DD;
+  --color-amber-200: #FAC7B7;
+  --color-amber-300: #F7A187;
+  --color-amber-400: #F47852;
+  --color-amber-500: #F15322;
+  --color-amber-600: #D83D0E;
+  --color-amber-700: #B1320B;
+  --color-amber-800: #902909;
+  --color-amber-900: #732007;
+  --color-amber-950: #481405;
+  --color-orange-50: #FDF2F1;
+  --color-orange-100: #FBE1DF;
+  --color-orange-200: #F7BEBA;
+  --color-orange-300: #F2938C;
+  --color-orange-400: #ED645A;
+  --color-orange-500: #E8382C;
+  --color-orange-600: #CF2317;
+  --color-orange-700: #AA1D13;
+  --color-orange-800: #8A170F;
+  --color-orange-900: #6E130C;
+  --color-orange-950: #450C08;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
